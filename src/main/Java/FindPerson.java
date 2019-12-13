@@ -26,9 +26,11 @@ public class FindPerson implements Servlet {
 
             String ad = servletRequest.getParameter("ad");
             String soyad = servletRequest.getParameter("soyad");
+
             Person person = new Person();
             person.setAd(ad);
             person.setSoyad(soyad);
+
             personelList.add(person);
 
         } else if (islem.equals("listele")) {
