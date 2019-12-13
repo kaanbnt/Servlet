@@ -33,6 +33,8 @@ public class FindPerson implements Servlet {
 
             personelList.add(person);
 
+            servletResponse.getWriter().write("Kaydetme Islemi Yapildi");
+
         } else if (islem.equals("listele")) {
 
             for (Person person : personelList) {
