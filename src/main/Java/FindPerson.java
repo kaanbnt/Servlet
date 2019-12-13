@@ -28,7 +28,6 @@ public class FindPerson implements Servlet {
             person.setSoyad(soyad);
             personelList.add(person);
         } else if (islem.equals("listele")) {
-            //Person person=new Person();
             for (Person person : personelList) {
                 String html = person.getAd()+" "+person.getSoyad()+"\n";
                 servletResponse.setCharacterEncoding("UTF-8");
