@@ -18,16 +18,21 @@ public class FindPerson implements Servlet {
 
     @Override
     public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
+
         String islem = servletRequest.getParameter("islem");
         System.out.println(islem);
+
         if (islem.equals("kaydet")) {
+
             String ad = servletRequest.getParameter("ad");
             String soyad = servletRequest.getParameter("soyad");
             Person person = new Person();
             person.setAd(ad);
             person.setSoyad(soyad);
             personelList.add(person);
+
         } else if (islem.equals("listele")) {
+
             for (Person person : personelList) {
                 String html = person.getAd()+" "+person.getSoyad()+"\n";
                 servletResponse.setCharacterEncoding("UTF-8");
